@@ -1,0 +1,13 @@
+p{
+	color:#3ab0de;
+	font-weight: 600;
+}
+
+.glyphicon{
+	cursor: pointer;
+}
+.page-header{
+	color:#238aa9;
+	font-size: 24px;
+	font-family: 'Castellar';
+}

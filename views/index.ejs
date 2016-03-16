@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rare2Populare</title>
+		<link rel="stylesheet" href="/stylesheets/styles.css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+		<script src="/javascripts/ang.js"></script>
+		<style>
+			body{background-color: #5bc0de;}
+			.container{font-family: 'Segoe UI';background-color: #fafafa;}
+		</style>
+	</head>
+	<body ng-app="peopleComments" ng-controller="Base">
+	<script type="text/ng-template" id="/home.html"> 
+		
+		<br>
+		<br>
+		<div class="container">
+		<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+		
+		<div class="page-header">
+			<h2>Learn. Share. Popularize.</h2> 
+		</div>
+			<p>Think some lesser known facts to the community should be brought into light?</p>
+			<p>Share here to let the world know.</p>
+			<hr/>
+		<div ng-repeat="comment in comments|orderBy:'-upvotes'" style="line-height:25px">
+			{{comment.username}} - {{comment.contents}}  
+			<br>
+			{{comment.upvotes}}
+			<span class="glyphicon glyphicon-triangle-top" ng-click="increaseUpvotes(comment)" style="color:green"></span> &nbsp;&nbsp;
+			{{comment.downvotes}}
+			<span class="glyphicon glyphicon-triangle-bottom" ng-click="increaseDownvotes(comment)" style="color:red"></span>
+			<hr/>
+		</div>
+		<form ng-submit="addComment()">
+			<div class="col-xs-2">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Your Name" ng-model="username"></input>
+			</div>
+			</div>
+			<div class="col-xs-8">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="What would you like to share?" ng-model="contents"></input>
+			</div>
+			</div>
+			<button class="btn btn-info" type="submit">Add My Entry</button>
+		</form>
+		</div>
+		</div>
+		<br>
+		</div>
+		<br>
+	</script>  
+	</body>
+</html>
