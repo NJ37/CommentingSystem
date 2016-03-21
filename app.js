@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 require('./models/comments.js');
-mongoose.connect('mongodb://localhost/data', function(err) {
+mongoose.connect('mongodb://localhost/database', function(err) {
     if(err) {
         console.log('connection error', err);
     } else {
