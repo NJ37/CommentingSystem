@@ -12,7 +12,7 @@ in the terminal from the mongodb directory (C:\...\mongodb\bin) or else set your
 
 Change directory in another terminal to C:\...\nodejs\CommentingSystem and run
     'npm start'
-to run the server at localhost:3000 (now page can be viewed in the browser)
+to run the server at localhost:3000 (now page can be viewed in the browser by typing 'localhost:3000' or 'localhost:3000/#/home' in the browser's URL)
 
 Add your comments by typing in your name (can be left blank) and data in the input box at the bottom.
 You can also upvote/downvote existing comments.
