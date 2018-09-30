@@ -1,4 +1,4 @@
-# CommentingSystem
+# Commenting System
 To view/add posts and upvote/downvote existing ones.
 
 Requirements: MongoDB (used v3.2.4), NodeJS and related npm packages.
